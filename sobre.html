@@ -2,10 +2,213 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mim</title>
+    <title>Portfolio - Mylena Leite</title>
 </head>
+
+<style>
+    /*Estilo do Header*/
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #f39c12;
+            color: white;
+            border-radius: 4px;
+        }
+
+        /* Estilo da Section Título */
+        section#title-section {
+            background-color: #f4f4f4;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        section#title-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        section#title-section h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        section#title-section p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .elementosTitulo {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espaço entre os elementos */
+            flex-wrap: wrap;
+        }
+        
+        .elementosTitulo p {
+            font-size: 1.2rem;
+            color: #555;
+            margin: 5px;
+            padding: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .elementosTitulo p:hover {
+            background-color: #f39c12;
+            color: white;
+            border-radius: 4px;
+        }
+        /* Estilo da Section Título */
+
+        /* Estilo da Seção Sobre Mim */
+        section#sobre {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            text-align: left;
+            color: #333;
+        }
+
+        section#sobre h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        section#sobre p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        .sobreMim {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+        /* Estilizando a Seção Sobre Mim */
+</style>
+
 <body>
-    <h1>Sobre mim</h1>
+    <!-- Sessão Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Sessão Header -->
+
+    <!-- Section de Título -->
+    <section id="title-section">
+        <img src="imgs/fotoTitulo.jpeg" alt="Foto de Perfil">
+        <h1>Mylena Leite Bortolozzo</h1>
+        <div class="elementosTitulo">
+            <p>Desenvolvedora Web</p>
+            <p>Estudante de ADS</p>
+            <p>Trainee SAP ABAP</p>
+        </div>
+    </section>
+    <!-- Section de Título -->
+
+    <!-- Seção Sobre Mim -->
+    <section id="sobre">
+        <div class="sobreMim">
+            <h2>Sobre Mim</h2>
+            <p>
+                Olá! Meu nome é Mylena Leite e sou uma desenvolvedora web apaixonada por criar soluções digitais eficazes e elegantes.
+                Com foco em desenvolvimento de sites estáticos e soluções PHP, estou sempre em busca de novos desafios e
+                oportunidades de aprendizado. Atualmente, sou estudante de Análise e Desenvolvimento de Sistemas, e trabalho como Trainee SAP ABAP.
+            </p>
+            <p>
+                Ao longo dos meus estudos e experiência profissional, desenvolvi uma sólida compreensão de diversas tecnologias
+                web, incluindo HTML, CSS, e PHP. Acredito que a combinação de uma boa lógica com um design intuitivo é fundamental
+                para criar projetos que impactam positivamente os negócios e seus clientes.
+            </p>
+        </div>
+    </section>
+    <!-- Seção Sobre Mim -->
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projetos</h2>
+            <ul>
+                <li>Projeto 1: Descrição do projeto 1</li>
+                <li>Projeto 2: Descrição do projeto 2</li>
+                <li>Projeto 3: Descrição do projeto 3</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Email: mylenalb.dev@gmail.com</p>
+            <p>Telefone/WhatsApp: <a href="https://wa.me/5527997150373" target="_blank">(27)99715-0373</a></p>
+            <p>Conecte-se comigo nas redes sociais:</p>
+            <ul>
+                <li><a href="https://github.com/mylenaleiteb" target="_blank">GitHub</a></li>
+                <li><a href="https://www.instagram.com/mylenalb.dev" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mylena Leite. Todos os direitos reservados.</p>
+            <p>Designed by Mylena Leite</p>
+        </div>
+    </footer>
 </body>
 </html>
