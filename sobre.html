@@ -4,135 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Portfolio - Mylena Leite</title>
 </head>
-
-<style>
-    /*Estilo do Header*/
-    body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 8px 16px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            background-color: #f39c12;
-            color: white;
-            border-radius: 4px;
-        }
-
-        /* Estilo da Section Título */
-        section#title-section {
-            background-color: #f4f4f4;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        section#title-section img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-
-        section#title-section h1 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        section#title-section p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 5px;
-        }
-
-        .elementosTitulo {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Espaço entre os elementos */
-            flex-wrap: wrap;
-        }
-        
-        .elementosTitulo p {
-            font-size: 1.2rem;
-            color: #555;
-            margin: 5px;
-            padding: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .elementosTitulo p:hover {
-            background-color: #f39c12;
-            color: white;
-            border-radius: 4px;
-        }
-        /* Estilo da Section Título */
-
-        /* Estilo da Seção Sobre Mim */
-        section#sobre {
-            background-color: #ffffff;
-            padding: 60px 20px;
-            text-align: left;
-            color: #333;
-        }
-
-        section#sobre h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        section#sobre p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-        }
-        .sobreMim {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: justify;
-        }
-        /* Estilizando a Seção Sobre Mim */
-</style>
-
 <body>
     <!-- Sessão Header -->
     <header>
@@ -177,17 +51,38 @@
     </section>
     <!-- Seção Sobre Mim -->
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
+    <!-- Seção Projetos -->
+    <section id="projetos">
+        <div class="projetos">
             <h2>Projetos</h2>
-            <ul>
-                <li>Projeto 1: Descrição do projeto 1</li>
-                <li>Projeto 2: Descrição do projeto 2</li>
-                <li>Projeto 3: Descrição do projeto 3</li>
-            </ul>
+            <p>
+                Alguns dos projetos que desenvolvi até o momento na minha trajetória profissional.
+            </p>
+            <div class="grid-projects">
+                <div class="project-item">
+                    <img src="imgs/portfolioprofissional.jpeg" alt="Projeto 1">
+                    <h3>Portfólio Profissional</h3>
+                    <p>Portfolio profissional criado com as tecnologias HTML, CSS, Javascript e usando frameworks como Bootstrap.</p>
+                </div>
+                <div class="project-item">
+                    <img src="imgs/siteExercicio.png" alt="Projeto 2">
+                    <h3>Site Suporte360</h3>
+                    <p>Este projeto envolve a criação de um site com HTML, CSS e Javascript para treinar conceitos de desenvolvimento web de uma empresa fictícia.</p>
+                </div>
+                <div class="project-item">
+                    <img src="imgs/calc.png" alt="Projeto 3">
+                    <h3>Projeto 3</h3>
+                    <p>Projeto de uma calculadora .</p>
+                </div>
+                <div class="project-item">
+                    <img src="imgs/projeto4.png" alt="Projeto 4">
+                    <h3>Projeto 4</h3>
+                    <p>Aplicação web com integração de banco de dados para controle de estoque.</p>
+                </div>
+            </div>
         </div>
     </section>
+    <!-- Seção Projetos-->
 
     <!-- Contact Section -->
     <section id="contact">
