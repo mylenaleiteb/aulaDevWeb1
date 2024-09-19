@@ -1,10 +1,16 @@
+html {
+    scroll-behavior: smooth; /*Deslizar suave*/
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 16px; /* Tamanho base para todo o documento */
+    font-size: 16px;
     line-height: 1.5;
     color: #333;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    
 }
 
 header {
@@ -49,7 +55,7 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
-/* Estilo da Section Título */
+/* Estilo da Section Título
 section#title-section {
     background-color: #DEB887;
     padding: 60px 20px;
@@ -79,7 +85,7 @@ section#title-section p {
 .elementosTitulo {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaço entre os elementos */
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -98,37 +104,110 @@ section#title-section p {
 }
 /* Estilo da Section Título */
 
+/* Estilo da Section Título */
+section#title-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 92vh;
+    background: linear-gradient(90deg, #4b0082 50%, #f39c12 50%);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.title-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.text-section {
+    flex: 1;
+    color: #ffffff;
+    padding-right: 20px;
+}
+
+.text-section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+}
+
+.text-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #d3d3d3;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.image-section::before {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 5px solid white;
+    top: -10px;
+    right: -10px;
+    z-index: 1;
+}
+/* Estilo da Section Título */
+
+
 /* Estilo da Seção Sobre Mim */
 section#sobre {
     background-color: #ffffff;
     padding: 60px 20px;
     color: #333;
-    margin-left: 70px;
-    margin-right: 70px;
+    max-width: 1200px; /* Define a largura máxima */
+    margin: 0 auto; /* Centraliza a seção */
 }
 
 .sobre-container {
     display: flex;
-    align-items: center; /* Centraliza verticalmente a imagem e o texto */
-    justify-content: space-between; /* Garante que a imagem fique à esquerda e o texto à direita */
-    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Espaço entre a imagem e o texto */
 }
 
 .sobre-container img.minha-foto {
-    width: 250px; /* Ajuste o tamanho da imagem conforme necessário */
+    width: 250px; 
     height: auto;
-    border-radius: 10px; /* Bordas arredondadas para a foto */
-    object-fit: cover; /* Garante que a imagem não distorça */
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+    position: relative; /* Para o efeito de borda */
+    padding: 5px; /* Espaço para o gradiente */
+    background: linear-gradient(90deg, #4b0082 0%, #f39c12 100%); /* Gradiente da borda */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
 .sobreMim {
-    flex: 1; /* O texto ocupa o restante do espaço */
+    flex: 1;
     text-align: left;
-}
-
-.sobreMim h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
 }
 
 .sobreMim p {
@@ -142,36 +221,25 @@ section#sobre {
         flex-direction: column;
         text-align: center;
     }
-}
+
     .sobre-container img.minha-foto {
         margin-bottom: 20px;
     }
+}
 /* Estilizando a Seção Sobre Mim */
 
 /* Estilizando a Seção de Projetos */
 section#projetos {
     background-color: #ffffff;
     padding: 60px 20px;
-    text-align: left;
     color: #333;
-}
-
-section#projetos h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-section#projetos p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .projetos {
-    max-width: 1200px; /* Garantir espaço suficiente para os itens */
-    margin: 0 auto;
     text-align: justify;
+    margin-top: 40px;
 }
 
 .grid-projects {
@@ -185,8 +253,8 @@ section#projetos p {
 .project-item {
     background-color: #f4f4f4;
     padding: 20px;
-    flex-basis: calc(50% - 20px); /* Forçar dois itens por linha, considerando o gap */
-    box-sizing: border-box; /* Garante que padding seja incluído no cálculo de largura */
+    flex-basis: calc(50% - 20px);
+    box-sizing: border-box; 
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -196,7 +264,7 @@ section#projetos p {
     width: 100%;
     height: 150px;
     object-fit: cover;
-        border-radius: 10px;
+    border-radius: 10px;
     margin-bottom: 15px;
 }
 
@@ -214,7 +282,7 @@ section#projetos p {
 
 /* Estilizando a Seção de Contato */
 section#contact {
-    background-color: #f4f4f4; /* Seguindo o padrão de cores neutras */
+    background-color: #f4f4f4;
     padding: 60px 20px;
     text-align: center;
     color: #333;
@@ -239,13 +307,13 @@ section#contact a {
 }
 
 section#contact a:hover {
-    color: #e67e22; /* Efeito de hover para links */
+    color: #e67e22;
 }
 
 section#contact ul {
     list-style: none;
     padding: 0;
-    margin: 20px 0; /* Espaçamento para a lista */
+    margin: 20px 0;
 }
 
 section#contact ul li {
@@ -263,18 +331,18 @@ section#contact ul li a {
 }
 
 section#contact ul li img {
-    width: 30px; /* Tamanho das logos */
+    width: 30px;
     height: auto;
-    margin-right: 8px; /* Espaçamento entre logo e texto */
+    margin-right: 8px;
 }
 
 section#contact ul li a:hover {
-    color: #f39c12; /* Cor de hover semelhante aos outros links do site */
+    color: #f39c12;
 }
 
 /* Estilo do Footer */
 footer {
-    background-color: #f39c12; /* Cor do hover */
+    background-color: #f39c12;
     padding: 10px 0;
     text-align: center;
 }
@@ -288,4 +356,4 @@ footer p {
 footer .container {
     max-width: 1200px;
     margin: 0 auto;
-}
+} 
